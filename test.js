@@ -319,20 +319,36 @@
 
 // _________________________________________________________________
 
-function isPalindrome(s){
-    s = s.toLowerCase();
-    s = s.replace(/[^a-zA-Z0-9]/g,''); //says negate characters which are other than a-z, A-z or 0-9
-    let i = 0
-    let j = s.length-1
+// function isPalindrome(s){
+//     s = s.toLowerCase();
+//     s = s.replace(/[^a-zA-Z0-9]/g,''); //says negate characters which are other than a-z, A-z or 0-9
+//     let i = 0
+//     let j = s.length-1
 
-    while(i < j){
-        if (s[i++]!== s[j--]){
+//     while(i < j){
+//         if (s[i++]!== s[j--]){
 
-            return false
-        }
+//             return false
+//         }
+//     }
+//     return true;
+// }
+
+// let str = "race a car"
+// console.log(isPalindrome(str))
+
+// _________________________________________________________________
+
+function isAnagram(s,t){
+
+    for (let i=0; i < s.length; i++){
+        let arr = s.split("")
+        // let filtered = arr.filter(lettter => letter != arr[i])
+       console.log(t.includes(arr[i]))
     }
-    return true;
+
 }
 
-let str = "race a car"
-console.log(isPalindrome(str))
+let str = "anagram"
+let t = "nagaram"
+console.log(isAnagram(str, t))
