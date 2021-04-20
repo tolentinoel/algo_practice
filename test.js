@@ -341,14 +341,33 @@
 
 function isAnagram(s,t){
 
-    for (let i=0; i < s.length; i++){
-        let arr = s.split("")
-        // let filtered = arr.filter(lettter => letter != arr[i])
-       console.log(t.includes(arr[i]))
+    if (s.length !== t.length){
+        return false
     }
+
+    let lib = {}
+
+    for (let i=0; i < s.length; i++){
+        if(lib[s[i]]){
+            lib[s[i]] += 1
+        } else {
+            lib[s[i]] = 1
+        }
+    }
+
+    for (let i = 0; i < t.length; i++) {
+        if (lib[t[i]]) {
+          lib[t[i]] -= 1;
+        } else {
+          return false;
+        }
+    }
+
+    return true;
+
 
 }
 
 let str = "anagram"
-let t = "nagaram"
-console.log(isAnagram(str, t))
+let test = "nagaram"
+console.log(isAnagram(str, test))
