@@ -378,9 +378,19 @@ function longestCommonPrefix(arr){
     let obj = {}
 
     for(let i= 0; i < arr.length; i++){
+      let a = arr[i].split("")
+
+        for(let j= 0; j < a.length; j++){
+            if(obj[a[j]]){
+                obj[a[j]] += 1
+            } else {
+                obj[a[j]] = 1
+            }
+        }
 
     }
-
+    let rr = Object.values(obj).sort((a,b) => b-a)
+    return Object.keys(obj).filter(key => obj[key] === rr[0]).join("")
 }
 
 let strings = ["flower","flow","flight"]
