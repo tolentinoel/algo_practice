@@ -387,13 +387,19 @@ function longestCommonPrefix(arr){
                 obj[a[j]] = 1
             }
         }
-        // console.log(obj)
     }
+ 
     let rr = Object.values(obj)
-    // console.log(rr)
-    return Object.keys(obj).filter(key => obj[key] === rr[0] && obj[key] > 1).join("")
+    let final = ""
+
+    if(rr[0] == 1){
+        return final
+    } else {
+
+        return Object.keys(obj).filter(key => obj[key] === rr[0] && obj[key] > 1).join("")
+    }
 }
 
-let strings = ["flower","flow","flight"]
-// let strings = ["dog","racecar","car"]
+// let strings = ["flower","flow","flight"]
+let strings = ["dog","racecar","car"]
 console.log(longestCommonPrefix(strings))
