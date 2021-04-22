@@ -374,8 +374,9 @@
 
 
 function longestCommonPrefix(arr){
-    let result = []
-    let j = 0
+
+    let obj = {}
+
     for(let i= 0; i < arr.length; i++){
 
     }
