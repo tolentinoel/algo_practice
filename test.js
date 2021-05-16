@@ -372,26 +372,26 @@
 // let test = "nagaram"
 // console.log(isAnagram(str, test))
 
+// _________________________________________________________________
+// function longestCommonPrefix(strs){
+//     let dfault = '';
+//     if (!strs.length) return dfault; //checks if arr is empty.
+//     let word = strs[0]; //if array is not empty, declare variable for first word.
 
-function longestCommonPrefix(strs){
-    let dfault = '';
-    if (!strs.length) return dfault; //checks if arr is empty.
-    let word = strs[0]; //if array is not empty, declare variable for first word.
+//     for (let i=0; i< word.length; i++) {
 
-    for (let i=0; i< word.length; i++) {
-
-        let x = strs.map((eachWord) => {
-            return eachWord.length > i && eachWord !== "" && eachWord[i] === word[i];
-        }); // creating a new array with conditionals:
+//         let x = strs.map((eachWord) => {
+//             return eachWord.length > i && eachWord !== "" && eachWord[i] === word[i];
+//         }); // creating a new array with conditionals:
         // if eachWord's length is more than 1
         // & its not an empty string
         // & its first letter is equal to the first word's first letter.
-        
-        if (x.includes(false)) { return dfault; }
-        dfault += word[i];
-    }
-    console.log(x, word[i])
-    return dfault;
+
+//         if (x.includes(false)) { return dfault; } //if the x array includes false, return empty array. else,
+//         dfault += word[i]; //add the letter index i to empty string
+//     }
+
+//     return dfault; 
 
 
     // if (!arr.length || arr.length === 1){
@@ -420,8 +420,17 @@ function longestCommonPrefix(strs){
 
     //     return Object.keys(obj).filter(key => obj[key] === rr[0] && obj[key] > 1).join("")
 
-}
+// }
 
 // let strings = ["flower","flow","flight"]
-let strings = ["dog","racecar","car"]
-console.log(longestCommonPrefix(strings))
+// let strings = ["dog","racecar","car"]
+// console.log(longestCommonPrefix(strings))
+
+// _________________________________________________________________
+
+function removeElement(num,val){
+    console.log(num,val)
+}
+let n = [3,2,2,3]
+let v = 3
+console.log(removeElement(n,v))
