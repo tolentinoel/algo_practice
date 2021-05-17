@@ -391,7 +391,7 @@
 //         dfault += word[i]; //add the letter index i to empty string
 //     }
 
-//     return dfault; 
+//     return dfault;
 
 
     // if (!arr.length || arr.length === 1){
@@ -428,8 +428,22 @@
 
 // _________________________________________________________________
 
-function removeElement(num,val){
-    console.log(num,val)
+function removeElement(nums,val){
+    // let count = 0
+    // for (let i = 0; i < num.length; i++){
+    //     if(num[i] == val){
+    //         count += 1
+    //         num[i] = 0
+    //     }
+    // }
+    // return count
+
+    for (let i = 0; i < nums.length; i++){
+        if(nums[i] == val){
+           nums.splice(i, 1)
+         }
+     }
+     return nums.length
 }
 let n = [3,2,2,3]
 let v = 3
