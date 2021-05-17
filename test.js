@@ -429,22 +429,22 @@
 // _________________________________________________________________
 
 function removeElement(nums,val){
-    // let count = 0
-    // for (let i = 0; i < num.length; i++){
-    //     if(num[i] == val){
-    //         count += 1
-    //         num[i] = 0
-    //     }
-    // }
-    // return count
+
 
     for (let i = 0; i < nums.length; i++){
-        if(nums[i] == val){
-           nums.splice(i, 1)
-         }
-     }
-     return nums.length
+        if(nums[i] === val){
+            nums.splice(i, 1)
+            i-= 1
+            }
+
+        }
+
+    return nums.length
+
+
 }
-let n = [3,2,2,3]
-let v = 3
+
+let n = [0,1,2,2,3,0,4,2]
+
+let v = 2
 console.log(removeElement(n,v))
