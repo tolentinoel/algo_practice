@@ -324,16 +324,13 @@
 //     s = s.replace(/[^a-zA-Z0-9]/g,''); //says negate characters which are other than a-z, A-z or 0-9
 //     let i = 0
 //     let j = s.length-1
-
 //     while(i < j){
 //         if (s[i++]!== s[j--]){
-
 //             return false
 //         }
 //     }
 //     return true;
 // }
-
 // let str = "race a car"
 // console.log(isPalindrome(str))
 
@@ -344,9 +341,7 @@
 //     if (s.length !== t.length){
 //         return false
 //     }
-
 //     let lib = {}
-
 //     for (let i=0; i < s.length; i++){
 //         if(lib[s[i]]){
 //             lib[s[i]] += 1
@@ -362,12 +357,8 @@
 //           return false;
 //         }
 //     }
-
 //     return true;
-
-
 // }
-
 // let str = "anagram"
 // let test = "nagaram"
 // console.log(isAnagram(str, test))
@@ -377,23 +368,17 @@
 //     let dfault = '';
 //     if (!strs.length) return dfault; //checks if arr is empty.
 //     let word = strs[0]; //if array is not empty, declare variable for first word.
-
 //     for (let i=0; i< word.length; i++) {
-
 //         let x = strs.map((eachWord) => {
 //             return eachWord.length > i && eachWord !== "" && eachWord[i] === word[i];
 //         }); // creating a new array with conditionals:
         // if eachWord's length is more than 1
         // & its not an empty string
         // & its first letter is equal to the first word's first letter.
-
 //         if (x.includes(false)) { return dfault; } //if the x array includes false, return empty array. else,
 //         dfault += word[i]; //add the letter index i to empty string
 //     }
-
 //     return dfault;
-
-
     // if (!arr.length || arr.length === 1){
     //     return '';
     // }
@@ -402,7 +387,6 @@
 
     // for(let i= 0; i < arr.length; i++){
     //   let a = arr[i].split("")
-
     //   for(let j= 0; j <= 1; j++){
     //       if(obj[a[j]]){
     //           obj[a[j]] += 1
@@ -411,15 +395,11 @@
     //       }
     //   }
     // }
-
     // let rr = Object.values(obj)
-
     // if(rr[0] === 1){
     //     return rr;
     // }
-
     //     return Object.keys(obj).filter(key => obj[key] === rr[0] && obj[key] > 1).join("")
-
 // }
 
 // let strings = ["flower","flow","flight"]
@@ -429,7 +409,6 @@
 // _________________________________________________________________
 
 // function removeElement(nums,val){
-
     // SOLUTION 1 76ms 38MB
     // for (let i = 0; i < nums.length; i++){
     //     if(nums[i] === val){
@@ -438,35 +417,32 @@
     //         }
     //     }
     // return nums.length
-
     // SOLUTION 2 80ms 38MB
 //     for (let i = nums.length; i >= 0; i--) {
 //         if (nums[i] === val) {
 //           nums.splice(i, 1);
 //         }
 //       }
-
-
 // }
-
 // let n = [0,1,2,2,3,0,4,2]
 // let v = 2
 // console.log(removeElement(n,v))
 
 // _________________________________________________________
 
-function merge(nums1, m, nums2, n){
+// function merge(nums1, m, nums2, n){
+//     nums1.splice(m, n)
+//     nums2.map(num => {
+//        nums1.push(num)
+//     })
+//     return nums1.sort((b,a)=> b-a)
+// }
+// let nums1 = [1,2,3,0,0,0]
+// let m = 3
+// let nums2 = [2,5,6]
+// let n = 3
 
-    nums1.splice(m, n)
-    nums2.map(num => {
-       nums1.push(num)
-    })
-    return nums1.sort((b,a)=> b-a)
-}
+// console.log(merge(nums1,m,nums2,n))
 
-let nums1 = [1,2,3,0,0,0]
-let m = 3
-let nums2 = [2,5,6]
-let n = 3
 
-console.log(merge(nums1,m,nums2,n))
+// _________________________________________________________
