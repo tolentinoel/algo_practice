@@ -452,3 +452,16 @@
 // let n = [0,1,2,2,3,0,4,2]
 // let v = 2
 // console.log(removeElement(n,v))
+
+// _________________________________________________________
+
+function merge(nums1, m, nums2, n){
+
+}
+
+let nums1 = [1,2,3,0,0,0]
+let m = 3
+let nums2 = [2,5,6]
+let n = 3
+
+console.log(merge(nums1,m,nums2,n))
