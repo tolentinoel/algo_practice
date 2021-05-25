@@ -437,6 +437,7 @@
 // let n = 3
 
 // console.log(merge(nums1,m,nums2,n))
-
+// MEMORY 38.8MB
+// RUNTIME 80ms 
 
 // ===========================================================
