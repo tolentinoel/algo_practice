@@ -172,9 +172,7 @@
 //   arr.forEach(word => {
 //     return word.split("").filter(letter => !vowels.includes(letter)).join("")
 //   })
-
 // }
-
 
 // string = "This website is for losers LOL!"
 // console.log(disemvowel(string))
@@ -246,9 +244,7 @@
 //     num = parseInt(digits.join('')) + 1
 //     return num.toString().split(',')[0].split('').map(Number)
 
-
 // }
-
 // arr = [9, 9]
 // arr2 = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]
 // console.log(plusOne(arr))
@@ -298,7 +294,6 @@
 // }
 // console.log(findDisappearedNumbers([1,1]))
 
-
 // =======================================================
 
 // function firstUniqChar(s) {
@@ -312,8 +307,6 @@
 //       }s
 //      return -1
 //   };
-
-
 //   console.log(firstUniqChar("cc"))
 
 
@@ -334,7 +327,7 @@
 // let str = "race a car"
 // console.log(isPalindrome(str))
 
-// _________________________________________________________________
+// ===========================================================
 
 // function isAnagram(s,t){
 
@@ -363,7 +356,8 @@
 // let test = "nagaram"
 // console.log(isAnagram(str, test))
 
-// _________________________________________________________________
+// ===========================================================
+
 // function longestCommonPrefix(strs){
 //     let dfault = '';
 //     if (!strs.length) return dfault; //checks if arr is empty.
@@ -406,7 +400,7 @@
 // let strings = ["dog","racecar","car"]
 // console.log(longestCommonPrefix(strings))
 
-// _________________________________________________________________
+// ===========================================================
 
 // function removeElement(nums,val){
     // SOLUTION 1 76ms 38MB
@@ -428,7 +422,7 @@
 // let v = 2
 // console.log(removeElement(n,v))
 
-// _________________________________________________________
+// ===========================================================
 
 // function merge(nums1, m, nums2, n){
 //     nums1.splice(m, n)
@@ -445,4 +439,4 @@
 // console.log(merge(nums1,m,nums2,n))
 
 
-// _________________________________________________________
+// ===========================================================
