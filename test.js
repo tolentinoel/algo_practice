@@ -505,7 +505,7 @@ function divide(n, k){
         // }
 
         for (let i = 0; i < n.length; i++){
-      
+
             console.log(arr.push(n.toString().substr(i,2)))
     }
 
