@@ -438,6 +438,78 @@
 
 // console.log(merge(nums1,m,nums2,n))
 // MEMORY 38.8MB
-// RUNTIME 80ms 
+// RUNTIME 80ms
 
 // ===========================================================
+
+
+// function test(numbers){
+//     // console.log(numbers)
+//     if (numbers.length < 2){
+//         return true
+//     }
+
+//     for (let i = 0; i < numbers.length; i++){
+//         let base = numbers.sort()
+//         if (numbers === base){
+//             console.log(base, numbers)
+//             return true
+//         }
+
+//         let swap = []
+//         swap = parseInt(numbers[i].toString().split('').reverse().join(''))
+//         console.log(swap)
+//         if (swap[i] < swap[i++]){
+//             return true
+//         }
+//         return false
+
+//     }
+// }
+
+// console.log(test([13, 31, 30]))
+
+
+// function removingPairsGame(numbers){
+//     let player = "Alice"
+//     let lib = {}
+
+//     for (let i = 0; i < numbers.length; i++){
+//         if(lib[numbers[i]]){
+//             lib[numbers[i]] += 1
+//         } else {
+//             lib[numbers[i]] = 1
+//         }
+//     }
+
+//     let keys = Object.keys(lib)
+//     let filtered = keys.filter(key => lib[key] != 1)
+//     console.log(lib)
+//     console.log(filtered)
+//     if (filtered.length%2 === 0) {
+
+//         player = "Bob"
+//     }
+//     return player
+// }
+
+// console.log(removingPairsGame([8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]))
+
+function divide(n, k){
+    // let x = 0
+
+    // while(x != nums.length){
+
+        //     arr.push(nums.toString().substring(x, 2))
+        //     x += 1
+        // }
+
+        for (let i = 0; i < n.length; i++){
+      
+            console.log(arr.push(n.toString().substr(i,2)))
+    }
+
+    // return arr
+}
+
+console.log(divide(120, 2))
