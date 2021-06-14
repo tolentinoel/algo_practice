@@ -444,7 +444,7 @@
 
 
 // function test(numbers){
-//     // console.log(numbers)
+    // console.log(numbers)
 //     if (numbers.length < 2){
 //         return true
 //     }
@@ -468,7 +468,9 @@
 // }
 
 // console.log(test([13, 31, 30]))
+// SOLVED 150/300
 
+// ===========================================================
 
 // function removingPairsGame(numbers){
 //     let player = "Alice"
@@ -494,22 +496,23 @@
 // }
 
 // console.log(removingPairsGame([8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]))
+// SOLVED 218/300
 
-function divide(n, k){
+// ===========================================================
+
+
+// function divide(n, k){
     // let x = 0
-
     // while(x != nums.length){
-
         //     arr.push(nums.toString().substring(x, 2))
         //     x += 1
         // }
+    //     for (let i = 0; i < n.length; i++){
 
-        for (let i = 0; i < n.length; i++){
-
-            console.log(arr.push(n.toString().substr(i,2)))
-    }
+    //         console.log(arr.push(n.toString().substr(i,2)))
+    // }
 
     // return arr
-}
+// }
 
-console.log(divide(120, 2))
+// console.log(divide(120, 2))
