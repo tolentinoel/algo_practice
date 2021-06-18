@@ -518,10 +518,104 @@
 // console.log(divide(120, 2))
 
 // ===========================================================
-function simpleArraySum(ar) {
+// function simpleArraySum(ar) {
 
-    let total = ar.reduce(( accumulator, currentValue ) => accumulator + currentValue, 0)
-    return total
+//     let total = ar.reduce(( accumulator, currentValue ) => accumulator + currentValue, 0)
+//     return total
+// }
+// let array = [1, 2, 3, 4, 10, 11]
+// console.log(simpleArraySum(array))
+
+// ===========================================================
+
+// function fizzBuzz(n) {
+
+
+//     for (let i = 1; i <= n; i++){
+
+//     if (i%3 !== 0 && i%5 !== 0){
+//         console.log(i)
+//     } else if (i%3 === 0 && i%5 === 0){
+//         console.log('FizzBuzz')
+//     } else if (i%3 === 0){
+//         console.log('Fizz')
+//     } else if (i%5 === 0){
+//         console.log('Buzz')
+//     }
+
+
+
+// }
+
+
+function fizzBuzz(input) {
+
+    for (let i = 1; i <= input; i++){
+        console.log((i%3 === 0 && i%5 === 0)? "FizzBuzz":(i%3 === 0) ? "Fizz" : (i%5 === 0)?"Buzz" : i);
+    }
 }
-let array = [1, 2, 3, 4, 10, 11]
-console.log(simpleArraySum(array))
+console.log(fizzBuzz(15))
+
+
+// function arraySum(inputs, tests) {
+
+    //return TRUE if any 2 num from inputs array add up to any num from tests array
+    //return FALSE if none
+    //does not need to distinguish multiple match
+    // console.log(inputs, tests)
+    // [ -1, 8, 3 ]
+    // [ 3, 7, 2 ]
+
+    // if (inputs.length < 2 ){
+    //     return false
+    // }
+
+    // for (let i = 0; i < inputs.length; i++){
+    //      let curr = inputs[i]
+    //      for (let j = inputs.length-1; j >= 0 ; j-- ){
+
+    //         let sum = curr + inputs[j]
+
+    //      return tests.includes(sum)
+    //     }
+    // }
+
+//     let lib = {}
+//     for (let i = 0; i < inputs.length; i++){
+//         for (let j = i+1; j < inputs.length; j++ ){
+//             lib[inputs[i] + inputs[j]] = true
+//         }
+//     }
+
+//    for (let x = 0; x < tests.length; x++){
+//        if (lib[tests[x]]){
+//          return  true
+//        }
+//     }
+//     return false
+// }
+
+// let a = [ -1, 4]
+// let b = [ 3]
+
+// let a = [
+//     7565, -13092,  -2947,  -3034,
+//    -9578, -15197,  -5482,   5205,
+//    15327,   6905, -16184, -11380,
+//    15194, -11155,  14413,   1771,
+//    14653,  13466,  14322,   -424,
+//    -3370,  13564,  -4997, -11163,
+//    -6749
+//  ]
+
+//  let b= [
+//     -4293,    212,  11942, -12584,
+//      1286,   8864,   2731,   5239,
+//    -14998, -11248,   8574,  -3992,
+//      4062, -11805,  12427,   6388,
+//     -1632,  10001, -16225, -16220,
+//     11542,    758, -15617,   7994,
+//      6717
+//  ]
+
+// console.log(arraySum(a, b))
