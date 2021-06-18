@@ -529,42 +529,33 @@
 // ===========================================================
 
 // function fizzBuzz(n) {
-
-
 //     for (let i = 1; i <= n; i++){
-
-//     if (i%3 !== 0 && i%5 !== 0){
-//         console.log(i)
-//     } else if (i%3 === 0 && i%5 === 0){
-//         console.log('FizzBuzz')
-//     } else if (i%3 === 0){
-//         console.log('Fizz')
-//     } else if (i%5 === 0){
-//         console.log('Buzz')
-//     }
-
-
-
+    //     if (i%3 !== 0 && i%5 !== 0){
+    //         console.log(i)
+    //     } else if (i%3 === 0 && i%5 === 0){
+    //         console.log('FizzBuzz')
+    //     } else if (i%3 === 0){
+    //         console.log('Fizz')
+    //     } else if (i%5 === 0){
+    //         console.log('Buzz')
+    //     }
 // }
 
+// ===========================================================
+// function fizzBuzz(input) {
 
-function fizzBuzz(input) {
-
-    for (let i = 1; i <= input; i++){
-        console.log((i%3 === 0 && i%5 === 0)? "FizzBuzz":(i%3 === 0) ? "Fizz" : (i%5 === 0)?"Buzz" : i);
-    }
-}
-console.log(fizzBuzz(15))
-
+//     for (let i = 1; i <= input; i++){
+//         console.log((i%3 === 0 && i%5 === 0)? "FizzBuzz":(i%3 === 0) ? "Fizz" : (i%5 === 0)?"Buzz" : i);
+//     }
+// }
+// console.log(fizzBuzz(15))
+// ===========================================================
 
 // function arraySum(inputs, tests) {
 
     //return TRUE if any 2 num from inputs array add up to any num from tests array
     //return FALSE if none
     //does not need to distinguish multiple match
-    // console.log(inputs, tests)
-    // [ -1, 8, 3 ]
-    // [ 3, 7, 2 ]
 
     // if (inputs.length < 2 ){
     //     return false
@@ -573,12 +564,12 @@ console.log(fizzBuzz(15))
     // for (let i = 0; i < inputs.length; i++){
     //      let curr = inputs[i]
     //      for (let j = inputs.length-1; j >= 0 ; j-- ){
-
     //         let sum = curr + inputs[j]
-
     //      return tests.includes(sum)
     //     }
     // }
+
+    // - - - - - - - - - - - - - - - - - 2ND SOLUTION-- DICTIONARY ROUTE - - - - - - -
 
 //     let lib = {}
 //     for (let i = 0; i < inputs.length; i++){
@@ -586,7 +577,6 @@ console.log(fizzBuzz(15))
 //             lib[inputs[i] + inputs[j]] = true
 //         }
 //     }
-
 //    for (let x = 0; x < tests.length; x++){
 //        if (lib[tests[x]]){
 //          return  true
