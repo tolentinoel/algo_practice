@@ -1,3 +1,5 @@
+
+//Write a function that weill return an array of 216 websafe hexcode colors.
 function hexCode(){
     const lib = ['00', '33', '66', '99', 'CC', 'FF']
 
@@ -13,10 +15,9 @@ function hexCode(){
 
     return arr
 }
-
 // console.log(hexCode())
 
-
+// Write a function that takes a string of hexcode and returns the luminance value of it.
 function luminance(hex) {
 
     const R = parseInt(hex[1] + hex[2], 16)
@@ -32,6 +33,8 @@ function luminance(hex) {
 // console.log(luminance('#663399'))
 // console.log(luminance('#000000'))
 
+
+// Write a function that sorts the colorArray based on luminance
 function sortLum(colorArray){
     return colorArray.sort((a,b) => luminance(b) - luminance(a))
 }
