@@ -14,5 +14,7 @@ function insertNodeAtHead(head, data) {
     }
     return head
 }
+
+
 // TEST CASES:
 // https://www.hackerrank.com/challenges/insert-a-node-at-the-head-of-a-linked-list/problem
