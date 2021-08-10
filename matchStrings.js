@@ -11,3 +11,4 @@ function matchingStrings(s, q){
 }
 
 console.log(matchingStrings([ 'aba', 'baba', 'aba', 'xzxb' ],[ 'aba', 'xzxb', 'ab' ]))
+console.log(matchingStrings([ "def", 'de', 'fgh' ],[ 'de', 'lmn', 'fgh' ]))
