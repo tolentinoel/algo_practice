@@ -1,18 +1,31 @@
 function frameGen(n){
 
     let frame = Array(n)
-    frame.fill()
-
     let str = "*"
+
     for (let i = 0; i < n; i++){
         if (i === 0 || i === frame.length-1){
-            frame[i] = "*".repeat(n)
+            // checks if it's the first or last element
+            frame[i] = "*".repeat(n) // "******"
         } else {
+            // if it's not the first and last element, we initialize a string with white spaces
+            // "*       *"
             frame[i] = str.padEnd(n) + "*"
         }
-
     }
     return frame
+    //[
+    //   '**********',
+    //   '*         *',
+    //   '*         *',
+    //   '*         *',
+    //   '*         *',
+    //   '*         *',
+    //   '*         *',
+    //   '*         *',
+    //   '*         *',
+    //   '**********'
+    //] <-- 10 elements, frame goes big or small depending on n
 }
 
 
