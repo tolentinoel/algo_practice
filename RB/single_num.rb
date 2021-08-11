@@ -1,3 +1,5 @@
+require 'pry'
+
 def single_number(nums)
 
   for num in nums do

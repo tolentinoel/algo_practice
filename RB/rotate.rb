@@ -1,12 +1,14 @@
-# def rotate(nums, k)
-#   k.times do
-#       moved = nums.pop
+require 'pry'
 
-#      nums.unshift(moved)
-#   end
-#   nums
-# end
+def rotate(nums, k)
+  k.times do
+      moved = nums.pop
 
-# arr = [-1,-100,3,99]
-# key = 2
-# p rotate(arr, key)
+     nums.unshift(moved)
+  end
+  nums
+end
+
+arr = [-1,-100,3,99]
+key = 2
+p rotate(arr, key)

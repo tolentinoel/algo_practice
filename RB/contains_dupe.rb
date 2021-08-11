@@ -1,3 +1,5 @@
+require 'pry'
+
 def contains_duplicate(nums)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     result = nums.detect{ |e| nums.count(e) > 1 }
