@@ -8,12 +8,12 @@ function strStr(h, n) {
         // return indexOf othe first occurence
     } else {
         return -1
-         // return -1 if false
-
+        // return -1 if false
     }
-    
-// ______SOLUTION 2__________
-    // return h.indexOf(n)
+    // <--- beats 34%
+
+    // ______SOLUTION 2__________
+    // return h.indexOf(n) <--- Runtime: 72 ms - Memory Usage: 39.6 MB- beats 84%
 
 
 }
