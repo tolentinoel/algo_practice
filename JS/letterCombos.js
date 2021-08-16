@@ -10,19 +10,37 @@ function letterCombos (n){
         "9" : "wxyz"
       }
 
-   if (n === ""){
-       return []
-   } else if (n.length === 1){
-        let arr = []
+    let arr = []
+
+    if (n.length <= 1 || n.startsWith("0")){
+
         n.split("").map(nmb => {
             arr = num[nmb]
         })
-        return  arr.split('')
-   }
+        return arr.split('')
+    }
+
+    let combo = []
+    let digits = n.split("")
+    for (let i = 0; i < digits.length; i++){
+        num[digits[i]].split("").map(ltr => {
+            arr.push(ltr)
+        })
+
+    }
+
+    for (let j = 0; j <= arr.length; j++){
 
 
+        for (k = 1; k <= arr.length-1; k++){
+        //    console.log(arr[j][k] + arr[k][k])
+        }
+    }
+
+
+    // return combo
 
 
 }
 
-console.log(letterCombos("2"))
+console.log(letterCombos("9"))
