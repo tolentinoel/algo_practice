@@ -23,24 +23,19 @@ function letterCombos (n){
     let combo = []
     let digits = n.split("")
     for (let i = 0; i < digits.length; i++){
-        num[digits[i]].split("").map(ltr => {
-            arr.push(ltr)
-        })
+        // num[digits[i]].split("").map(ltr => {
+        //     arr.push(ltr)
+        // }) [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+
+        arr.push(num[digits[i]].split(""))
 
     }
 
-    for (let j = 0; j <= arr.length; j++){
+    
 
-
-        for (k = 1; k <= arr.length-1; k++){
-        //    console.log(arr[j][k] + arr[k][k])
-        }
-    }
-
-
-    // return combo
+    return arr
 
 
 }
 
-console.log(letterCombos("9"))
+console.log(letterCombos("23"))
