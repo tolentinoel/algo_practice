@@ -1,3 +1,5 @@
+const fetch = require("node-fetch");
+
 // function findLast(seq, query){
 //     return seq.lastIndexOf(query)
 // }
@@ -48,17 +50,17 @@
 //true
 // SOME elements in numArr2 is equal to 0
 
-let array = [ 1, 2, 3, 4, 5 ]
-console.log(array.copyWithin(4))
+// let array = [ 1, 2, 3, 4, 5 ]
+// console.log(array.copyWithin(4))
 //copy elements from index 4 where in the new array the copied starts on index 4
 // [ 1, 2, 3, 4, 1 ]
 
-let array2 = [ "banana", "apple", "melon", "strawberry" ]
-console.log(array2.copyWithin(3,0))
+// let array2 = [ "banana", "apple", "melon", "strawberry" ]
+// console.log(array2.copyWithin(3,0))
 // the new array should have array2[0] at index 3
 // [ 'banana', 'apple', 'melon', 'banana' ]
 
-console.log(array2.copyWithin(2,1))
+// console.log(array2.copyWithin(2,1))
 // [ 'banana', 'apple', 'apple', 'melon' ]
 // the new array should have array2[1] at index 2
 
@@ -67,3 +69,10 @@ console.log(array2.copyWithin(2,1))
 // copyWithin(target)
 // copyWithin(target, start)
 // copyWithin(target, start, end)
+
+
+fetch("https://jsonmock.hackerrank.com/api/countries?page=2")
+    .then(response => response.json())
+    .then(data => {
+        return data
+    })
