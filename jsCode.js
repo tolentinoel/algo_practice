@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+// const fetch = require("node-fetch");
 
 // function findLast(seq, query){
 //     return seq.lastIndexOf(query)
@@ -71,8 +71,8 @@ const fetch = require("node-fetch");
 // copyWithin(target, start, end)
 
 
-fetch("https://jsonmock.hackerrank.com/api/countries?page=2")
-    .then(response => response.json())
-    .then(data => {
-        return data
-    })
+// fetch("https://jsonmock.hackerrank.com/api/countries?page=2")
+//     .then(response => response.json())
+//     .then(data => {
+//         return data
+//     })
