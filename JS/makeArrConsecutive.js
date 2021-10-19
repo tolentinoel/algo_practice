@@ -2,20 +2,13 @@ function makeArrayConsecutive2(statues) {
     if (statues.length === 1){
         return 0
     }
-
-    let counter = 0
-    let arr = statues.sort() //sorting the array in ascending order
-
-    for (let i = 0; i <= arr.length-1; i++){
-        // iterate thru the array and use counter
-        // If the next num - the current num is not equal 1
-        // & that it is not the last element of the array, add 1 on counter
-        if (!arr.includes(arr[i] + 1)){
-            counter += 1
-        }
-    }
-
-    return counter
+    
+    let max = Math.max(...statues)
+    let min = Math.min(...statues)
+    //deducting the lowest number to the highest number of the array
+    //then deducting the arr length from the difference, adding 1
+    
+    return 1 + max - min - statues.length
 }
 
 console.log(makeArrayConsecutive2([5, 4, 6]))
