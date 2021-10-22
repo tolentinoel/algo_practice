@@ -4,17 +4,14 @@ function reOrderArr (arr, idx) {
     let lib = {}
 
     for (let i = 0; i < arr.length; i++){
-
             lib[arr[i]] = idx[i]
-
     }
 
     let cloneArr = [...arr]
 
     for (let j = 0; j < cloneArr.length; j++){
-
-        let index = lib[cloneArr[j]] //3
-        let letter = cloneArr[j] //C
+        let index = lib[cloneArr[j]]
+        let letter = cloneArr[j]
         arr.splice(index, 1, letter)
     }
 
