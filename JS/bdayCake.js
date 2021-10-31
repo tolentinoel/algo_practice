@@ -1,9 +1,10 @@
 function birthday(candles) {
-    let count = 0
 
-    for (let i = 0; i < candles.length; i++){
-        
+    if (candles.length !== 0){
+        let tallest = Math.max(...candles)
+        console.log(tallest)
+        return candles.filter(num => num === tallest).length
     }
 }
 
-console.log(birthday([4, 4, 3, 1]))
+console.log(birthday([82, 49, 82, 82, 41, 82, 15, 63, 38, 25]))
