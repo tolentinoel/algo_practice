@@ -1,13 +1,43 @@
 function timeConvert(s){
     let arr = s.split("")
     let zone = arr.splice(-2).join("")
+    let nums = arr.join("").replaceAll(':', ' ').split(" ")
 
-    console.log(zone)
+    let converted = []
+    let lib = {
+        'hh': 0,
+        'mm': 0,
+        'ss': 0
+    }
+    for (let i = 0; i < nums.length; i++){
+        if (!lib[nums[i]] && i === 0){
+            lib.hh = parseInt(nums[i])
+        } else if (!lib[nums[i]] && i === 1){
+            lib.mm = parseInt(nums[i])
+        } else if (!lib[nums[i]] && i === 2) {
+            lib.ss = parseInt(nums[i])
+        }
+    }
 
+    if (zone === "PM"){
+        converted.push(12 + lib.hh)
+        converted.push(':' + nums[1])
+        converted.push(':' + nums[2])
+    } else {
+        let hour = 12 - lib.hh
+        if (hour === 0){
+            converted.push('00')
+        } else {
+            converted.push(hour)
+        }
+        converted.push(':' + nums[1] + ':')
+        converted.push(nums[2])
+    }
 
+    return converted.join("")
 }
 
-console.log(timeConvert('07:05:45PM'))
+console.log(timeConvert('12:05:45AM'))
 
 // Given a time in -hour AM/PM format, convert it to military (24-hour) time.
 
