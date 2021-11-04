@@ -1,7 +1,14 @@
 function timeConvert(s){
-    let arr = s.split("")
-    let zone = arr.splice(-2).join("")
-    let nums = arr.join("").replaceAll(':', ' ').split(" ")
+    let zone = s.split("").splice(-2).join("")
+    let str = s.split("").slice(0, s.length-2)
+
+    for (let i = 0; i < str.length; i ++){
+        if (str[i] === ":"){
+            str[i] = " "
+        }
+        
+    }
+    let nums = str.join('').split(" ")
 
     let converted = []
     let lib = {
@@ -9,7 +16,9 @@ function timeConvert(s){
         'mm': 0,
         'ss': 0
     }
-    for (let i = 0; i < nums.length; i++){
+
+    
+    for (let i = 0; i < nums.length-1; i++){
         if (!lib[nums[i]] && i === 0){
             lib.hh = parseInt(nums[i])
         } else if (!lib[nums[i]] && i === 1){
@@ -17,6 +26,7 @@ function timeConvert(s){
         } else if (!lib[nums[i]] && i === 2) {
             lib.ss = parseInt(nums[i])
         }
+      
     }
 
     if (zone === "PM"){
@@ -25,19 +35,20 @@ function timeConvert(s){
         converted.push(':' + nums[2])
     } else {
         let hour = 12 - lib.hh
-        if (hour === 0){
-            converted.push('00')
+        if (hour < 9){
+            converted.push('0' + `${hour}`)
         } else {
             converted.push(hour)
         }
-        converted.push(':' + nums[1] + ':')
-        converted.push(nums[2])
-    }
+        converted.push(':' + nums[1])
+        converted.push(':' + nums[2])
 
+    }
     return converted.join("")
+
 }
 
-console.log(timeConvert('12:05:45AM'))
+console.log(timeConvert('11:05:45PM'))
 
 // Given a time in -hour AM/PM format, convert it to military (24-hour) time.
 
