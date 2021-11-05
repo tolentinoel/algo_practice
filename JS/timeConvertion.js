@@ -28,11 +28,12 @@ function timeConvert(s){
     }
 
     if (zone === "PM"){
-        if(lib.hh < 10){
+        if (lib.hh < 10){
             converted.push(12 + lib.hh)
-
-        } else {
+        } else if (lib.hh === 12) {
             converted.push(lib.hh)
+        } else {
+            converted.push(12 + lib.hh)
         }
         converted.push(':' + nums[1])
         converted.push(':' + nums[2])
@@ -48,13 +49,13 @@ function timeConvert(s){
         }
         converted.push(':' + nums[1])
         converted.push(':' + nums[2])
-        console.log(converted)
+  
     }
     return converted.join("")
 
 }
 
-console.log(timeConvert('12:00:00AM'))
+console.log(timeConvert('12:45:54PM'))
 
 // Given a time in -hour AM/PM format, convert it to military (24-hour) time.
 
