@@ -1,40 +1,31 @@
 function longestSubStr(s) {
+// Given a string s, find the length of the longest substring without repeating characters.
 
     if (!s) {
         return 0
     }
+
     if (s.length === 1) {
         return 1
     }
 
-    let checked = []
-    let count = 0
-
+    let checked = ""
+    let count = 1
 
     for (let i = 0; i < s.length; i++){
 
-        // if current element is not same as the next & if it's not included in checked array,
-        // push into checked array to keep track & add score using count
-        // if it exists in checked array, empty out array and start new sequence of elements using checked array.
-        // console.log(s[i])
-
-        if (s[i] !== s[i+1] && !checked.includes(s[i])){
-            checked.push(s[i])
-            count = checked.length
-
-        } else if (s[i] === s[i+1] && !checked.includes(s[i])){
-            checked.push(s[i])
-            count = checked.length
-
-        } else if (s[i] !== s[i+1] && checked.includes(s[i])){
-            checked.length = 0
-            checked.push(s[i])
-
+        if (checked.includes(s[i])) {
+            // if it exist in the checked pile, compare num of checked vs. score, the higher value will be count
+            count = count > checked.length ? count : checked.length
+            // as for checked pile, split it to remove existing element then add the current element as checked
+            // ex. (if s = 'dvdf')--[ 'd', 'v' ] -- 'd' is existing, so we split then add to make it 'vd'
+            checked = checked.split(s[i])[1] + s[i]
         } else {
-
-            checked.length = 0
-            checked.push(s[i])
+            // if it doesnt exist in the checked pile, add s[i]
+            checked += s[i]
         }
+
+
     }
 
     console.log(checked)
@@ -48,4 +39,5 @@ console.log(longestSubStr("dvdf"))
 // console.log(longestSubStr("cdd"))
 
 
-
+// Runtime: 243 ms
+// Memory Usage: 44.3 MB
